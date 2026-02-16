@@ -1,0 +1,96 @@
+<!-- Place in front-page.php or a Block Pattern in WordPress -->
+<a class="skip-link" href="#main-content">Hopp til hovedinnhold</a>
+<header class="site-header" role="banner">
+  <div class="nav-wrap">
+    <a class="brand" href="/">RAW Trening</a>
+    <nav aria-label="Hovedmeny">
+      <ul class="nav-list">
+        <li><a href="/personlig-trening/">Personlig trening</a></li>
+        <li><a href="/klinikk/">Behandling</a></li>
+        <li><a href="/bedrift/">Bedrift</a></li>
+        <li><a href="/om-raw/">Om RAW</a></li>
+        <li><a href="/kontakt/">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="button button--primary" href="/kontakt/">Book kartleggingssamtale</a>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-grid">
+      <div>
+        <span class="badge">Trening • Behandling • Longevity</span>
+        <h1 id="hero-title">Bygg en sterk kropp for livet – med et komplett team i ryggen.</h1>
+        <p class="lead">RAW kombinerer personlig trening, klinisk behandling og smart oppfølging så du får resultater som varer.</p>
+        <div class="hero-actions">
+          <a class="button button--primary" href="/kontakt/">Start i dag</a>
+          <a class="button button--secondary" href="/personlig-trening/">Se tjenester</a>
+        </div>
+      </div>
+      <figure>
+        <img src="/wp-content/uploads/2021/06/pexels-yogendra-singh-5609026-687x1030.jpg" alt="Personlig trener følger opp kunde i styrkeøkt" loading="eager" decoding="async" />
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner">
+      <h2 class="section-heading">Våre tjenester</h2>
+      <div class="service-grid">
+        <article class="card">
+          <h3>Personlig trening</h3>
+          <p>Skreddersydde økter med tydelig progresjon, testing og tett coaching.</p>
+          <a href="/personlig-trening/">Les mer →</a>
+        </article>
+        <article class="card">
+          <h3>Behandling / klinikk</h3>
+          <p>Helhetlig oppfølging av muskel- og skjelettplager for raskere vei tilbake.</p>
+          <a href="/klinikk/">Les mer →</a>
+        </article>
+        <article class="card">
+          <h3>Bedrift</h3>
+          <p>Prestasjon, energi og lavere sykefravær gjennom målrettede bedriftsopplegg.</p>
+          <a href="/bedrift/">Les mer →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner testimonial-grid">
+      <article class="card">
+        <h3>«Endelig et opplegg som faktisk passer hverdagen.»</h3>
+        <p>Resultat: mindre smerter, bedre søvn, mer energi etter 12 uker.</p>
+        <p><strong>— Kunde, 43</strong></p>
+      </article>
+      <article class="card">
+        <h3>«Profesjonelt team med høy faglig trygghet.»</h3>
+        <p>Resultat: tilbake i løping uten kneplager etter kombinasjon av behandling + PT.</p>
+        <p><strong>— Kunde, 51</strong></p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner cta-banner">
+      <h2>Klar for å ta neste steg?</h2>
+      <p>Book en uforpliktende kartleggingssamtale og få en konkret plan for trening, helse og prestasjon.</p>
+      <a class="button button--primary" href="/kontakt/">Book samtale</a>
+    </div>
+  </section>
+</main>
+
+<!-- Article template content block for single.php -->
+<article class="prose" aria-labelledby="article-title">
+  <p class="badge">Artikkel</p>
+  <h1 id="article-title"><?php the_title(); ?></h1>
+  <p><em>Publisert <?php echo get_the_date(); ?> · <?php the_author(); ?></em></p>
+  <?php the_content(); ?>
+
+  <hr />
+  <h2>Relaterte artikler</h2>
+  <div class="blog-grid">
+    <!-- Use WP_Query loop for related posts -->
+  </div>
+</article>
