@@ -19,7 +19,7 @@ python3 -m http.server 8000 --directory .
 - http://127.0.0.1:8000/demo/index.html
 
 ## Sider
-- `index.html` (komplett ny hovedside med originalt innhold i nytt uttrykk)
+- `index.html` (hjem – komplett ny hovedside med originalt innhold i nytt uttrykk)
 - `tjenester.html`
 - `om.html`
 - `blogg.html`
@@ -29,3 +29,7 @@ python3 -m http.server 8000 --directory .
 ## Assets
 - `assets/styles.css`
 - `assets/app.js`
+
+## Troubleshooting
+Hvis du ser tekst som `<<<<<<<`, `=======` eller `>>>>>>>` i filer, er det uløste merge-konflikter.
+I denne versjonen er README ryddet og konfliktmarkører fjernet.
