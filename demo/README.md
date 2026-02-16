@@ -45,3 +45,11 @@ git add demo/README.md demo/assets/styles.css demo/index.html
 git commit
 git push
 ```
+
+Eller bruk hjelpeskriptet:
+
+```bash
+./demo/resolve-conflicts.sh
+```
+
+Dette scriptet beholder nåværende branch-versjon av demo-filene ("ours") for konfliktfilene i demoen.
