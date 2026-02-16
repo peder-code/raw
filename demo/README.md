@@ -1,6 +1,6 @@
 # RAW live demo prototype
 
-Denne demoen er nå en **komplett hjemmesideskisse** i nytt design, med tekst og bildebruk hentet fra originalside der det passer best.
+Denne demoen er en **komplett hjemmesideskisse** i nytt design, med tekst og bildebruk hentet fra originalside der det passer best.
 
 ## Åpne direkte i nettleser
 
@@ -30,26 +30,37 @@ python3 -m http.server 8000 --directory .
 - `assets/styles.css`
 - `assets/app.js`
 
-## Troubleshooting
-Hvis du ser tekst som `<<<<<<<`, `=======` eller `>>>>>>>` i filer, er det uløste merge-konflikter.
-I denne versjonen er README ryddet og konfliktmarkører fjernet.
+## Troubleshooting (GitHub konflikt på PR)
 
+Hvis GitHub viser konfliktfiler (f.eks. `demo/index.html`, `demo/assets/styles.css`, osv.),
+kan du løse alt lokalt med én kommando:
 
-Hvis PR-en viser konflikter i GitHub, gjør dette lokalt:
+```bash
+./demo/sync-main-and-resolve.sh
+```
+
+Skriptet gjør dette:
+1. henter `origin/main`
+2. merger inn i din branch
+3. auto-løser kjente demo-konflikter ved å beholde branch-versjonen (`ours`)
+4. committer merge-resultatet
+
+Til slutt:
+
+```bash
+git push
+```
+
+Da oppdateres PR-en, og `Squash and merge` blir normalt tilgjengelig igjen når konfliktene er borte.
+
+### Manuelt alternativ
 
 ```bash
 git fetch origin
 git merge origin/main
-# løs konflikter i demo/README.md, demo/assets/styles.css og demo/index.html
-git add demo/README.md demo/assets/styles.css demo/index.html
+./demo/resolve-conflicts.sh
 git commit
 git push
 ```
 
-Eller bruk hjelpeskriptet:
-
-```bash
-./demo/resolve-conflicts.sh
-```
-
-Dette scriptet beholder nåværende branch-versjon av demo-filene ("ours") for konfliktfilene i demoen.
+Hvis du ser tekst som `<<<<<<<`, `=======` eller `>>>>>>>` i filer, er det uløste merge-konflikter.
