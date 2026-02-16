@@ -30,7 +30,7 @@
   setScrolled();
 
   const revealElements = document.querySelectorAll('.reveal');
-  if (!reduceMotion && revealElements.length) {
+  if (!reduceMotion && revealElements.length && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

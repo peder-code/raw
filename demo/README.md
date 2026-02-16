@@ -33,3 +33,15 @@ python3 -m http.server 8000 --directory .
 ## Troubleshooting
 Hvis du ser tekst som `<<<<<<<`, `=======` eller `>>>>>>>` i filer, er det uløste merge-konflikter.
 I denne versjonen er README ryddet og konfliktmarkører fjernet.
+
+
+Hvis PR-en viser konflikter i GitHub, gjør dette lokalt:
+
+```bash
+git fetch origin
+git merge origin/main
+# løs konflikter i demo/README.md, demo/assets/styles.css og demo/index.html
+git add demo/README.md demo/assets/styles.css demo/index.html
+git commit
+git push
+```
